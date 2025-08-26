@@ -4,23 +4,18 @@ using UnityEngine;
 
 namespace CharacterController.States
 {
-    public class LocomotionState : BaseState
+    public class CrouchState : BaseState
     {
         private readonly InputMap inputMap;
 
-        public LocomotionState(params object[] args) : base(args)
+        public CrouchState(params object[] args) : base(args)
         {
             inputMap = References.GetValueOrDefault(typeof(InputMap)) as InputMap;
         }
 
         public override void Enter()
         {
-            Debug.Log(inputMap == null ? "No Input Map Provided" : "Input Map Provided");
-        }
-
-        public override void Update()
-        {
-            
+            Debug.Log("Enter Crouch State");
         }
     }
 }
